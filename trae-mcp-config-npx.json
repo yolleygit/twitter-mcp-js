@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "twitter-mcp-server": {
+      "command": "npx",
+      "args": ["twitter-mcp-js"],
+      "env": {
+        "TWITTER_API_KEY": "your_api_key_here"
+      },
+      "description": "Twitter MCP Server - Complete Twitter API integration with 32 tools for social media automation and analytics"
+    }
+  }
+}
