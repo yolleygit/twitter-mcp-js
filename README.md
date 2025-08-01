@@ -1,4 +1,7 @@
 # Twitter MCP Server
+[![npm version](https://img.shields.io/npm/v/twitter-mcp-js)](https://www.npmjs.com/package/twitter-mcp-js)
+[![GitHub license](https://img.shields.io/github/license/yolleygit/twitter-mcp-js)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/yolleygit/twitter-mcp-js?style=social)](https://github.com/yolleygit/twitter-mcp-js/stargazers)
 
 一个完整的Twitter API MCP服务器，基于twitterapi.io提供的API端点实现。
 
@@ -55,7 +58,8 @@
 1. 克隆项目 / Clone the repository:
 ```bash
 git clone <repository-url>
-cd Twitter_MCP
+cd twitter-mcp-js
+
 ```
 
 2. 安装依赖 / Install dependencies:
@@ -105,7 +109,7 @@ npm start
   "mcpServers": {
     "twitter": {
       "command": "node",
-      "args": ["/path/to/Twitter_MCP/src/index.js"]
+      "args": ["/path/to/twitter-mcp-js/src/index.js"]
     }
   }
 }
