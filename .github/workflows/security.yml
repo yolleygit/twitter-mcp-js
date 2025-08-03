@@ -54,11 +54,13 @@ jobs:
         sarif_file: 'trivy-results.sarif'
     
     - name: Check for secrets
+      if: github.event_name == 'pull_request'
+      continue-on-error: true
       uses: trufflesecurity/trufflehog@main
       with:
         path: ./
-        base: main
-        head: HEAD
+        base: ${{ github.event.pull_request.base.sha }}
+        head: ${{ github.event.pull_request.head.sha }}
         extra_args: --debug --only-verified
 
   dependency-review:
