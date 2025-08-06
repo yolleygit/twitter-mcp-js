@@ -1,6 +1,6 @@
 {
   "name": "twitter-mcp-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Complete Twitter API MCP server with 32 tools for social media integration, analytics, and automation",
   "main": "src/index.js",
   "type": "module",
