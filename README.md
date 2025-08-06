@@ -102,14 +102,44 @@ npm start
 
 ### MCP客户端配置 / MCP Client Configuration
 
-在你的MCP客户端中添加以下配置 / Add the following configuration to your MCP client:
+#### 本地开发配置 / Local Development Configuration
+适用于本地开发和调试 / For local development and debugging:
 
 ```json
 {
+  "$schema": "https://github.com/modelcontextprotocol/specification/blob/main/schema/mcp_config_schema.json",
+  "description": "Twitter MCP Server Configuration for Local Development",
   "mcpServers": {
-    "twitter": {
+    "twitter-mcp-server": {
       "command": "node",
-      "args": ["/path/to/twitter-mcp-js/src/index.js"]
+      "args": ["/path/to/twitter-mcp-js/src/index.js"],
+      "env": {
+        "TWITTER_API_KEY": "your_twitter_api_key_here"
+      },
+      "description": "Complete Twitter API integration with 32 tools for social media automation",
+      "capabilities": {
+        "tools": true
+      }
+    }
+  }
+}
+```
+
+#### NPX远程配置 / NPX Remote Configuration
+适用于快速部署和测试 / For quick deployment and testing:
+
+```json
+{
+  "$schema": "https://github.com/modelcontextprotocol/specification/blob/main/schema/mcp_config_schema.json",
+  "description": "Twitter MCP Server Configuration using NPX",
+  "mcpServers": {
+    "twitter-mcp-server": {
+      "command": "npx",
+      "args": ["twitter-mcp-js"],
+      "env": {
+        "TWITTER_API_KEY": "your_api_key_here"
+      },
+      "description": "Twitter MCP Server - Complete Twitter API integration with 32 tools for social media automation and analytics"
     }
   }
 }
@@ -153,15 +183,22 @@ npm start
 ## 项目结构 / Project Structure
 
 ```
-Twitter_MCP/
+twitter-mcp-js/
 ├── src/
 │   ├── index.js          # MCP服务器主文件 / Main MCP server
 │   ├── twitter-api.js    # Twitter API客户端 / Twitter API client
-│   └── tools.js          # 工具定义 / Tool definitions
-├── .env                  # 环境变量 / Environment variables
+│   ├── tools.js          # 工具定义 / Tool definitions
+│   └── health-server.js  # 健康检查服务器 / Health check server
+├── .github/
+│   └── workflows/
+│       └── security.yml  # 安全扫描工作流 / Security scan workflow
+├── mcp-config-local.json # 本地开发配置 / Local development config
+├── mcp-config-npx.json   # NPX远程配置 / NPX remote config
+├── examples.md           # 详细使用示例 / Detailed examples
+├── twitterapi_io.md      # API文档参考 / API documentation
 ├── package.json          # 项目配置 / Project configuration
 ├── README.md            # 项目文档 / Project documentation
-└── twitterapi_io.md     # API文档参考 / API documentation reference
+└── LICENSE              # 许可证 / License
 ```
 
 ## 错误处理 / Error Handling

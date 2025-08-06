@@ -1,4 +1,6 @@
 {
+  "$schema": "https://github.com/modelcontextprotocol/specification/blob/main/schema/mcp_config_schema.json",
+  "description": "Twitter MCP Server Configuration using NPX",
   "mcpServers": {
     "twitter-mcp-server": {
       "command": "npx",
@@ -9,4 +11,4 @@
       "description": "Twitter MCP Server - Complete Twitter API integration with 32 tools for social media automation and analytics"
     }
   }
-}
+} 

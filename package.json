@@ -51,9 +51,7 @@
     "LICENSE",
     ".env.example",
     "examples.md",
-    "TRAE_SETUP.md",
-    "mcp-config.json",
-    "trae-mcp-config.json",
-    "trae-mcp-config-npx.json"
+    "mcp-config-local.json",
+    "mcp-config-npx.json"
   ]
 }

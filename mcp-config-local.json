@@ -1,10 +1,10 @@
 {
   "$schema": "https://github.com/modelcontextprotocol/specification/blob/main/schema/mcp_config_schema.json",
-  "description": "Twitter MCP Server Configuration for Trae IDE",
+  "description": "Twitter MCP Server Configuration for Local Development",
   "mcpServers": {
     "twitter-mcp-server": {
       "command": "node",
-      "args": ["/Users/xman/Desktop/Extension/Twitter_MCP/src/index.js"],
+      "args": ["/path/to/twitter-mcp-js/src/index.js"],
       "env": {
         "TWITTER_API_KEY": "your_twitter_api_key_here"
       },
@@ -14,4 +14,4 @@
       }
     }
   }
-}
+} 
